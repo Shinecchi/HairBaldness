@@ -37,7 +37,7 @@ def train_yolo():
 
     # --- 4. VALIDATE ---
     print("--- Validating Model ---")
-    metrics = model.val()
+    metrics = model.val(device=0)  # Force GPU usage here too
     print(f"Top-1 Accuracy: {metrics.top1:.2f}")
 
 
